@@ -1,0 +1,38 @@
+﻿<Window x:Class="project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="ID:" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48"/>
+        <TextBlock Text="Name:" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48"/>
+        <TextBlock Text="Address:" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="48"/>
+
+        <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding CurrentUser.Id}"/>
+        <TextBox Grid.Column="2" Grid.Row="1" Text="{Binding CurrentUser.Name}"/>
+        <TextBox Grid.Column="3" Grid.Row="2" Text="{Binding CurrentUser.Addrress}"/>
+
+        <Button Content="Load" Grid.Column="0" Grid.Row="3" FontSize="48" Command="{Binding Load}"/>
+        <!--Click="tmpFunc"/ Command="{Binding Load}"-->
+        <!-- You can Switch Between 2 ways of loading by deleting 1 option and place to another. -->
+        <Button Content="Save" Grid.Column="1" Grid.Row="3" FontSize="48" Command="{Binding Save}"/>
+
+        <TextBox x:Name="res" Text="{Binding Result}" Grid.Row="4" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

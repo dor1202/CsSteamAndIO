@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <User id="1">
+    <Name>Dor</Name>
+    <Addrress>TelAviv</Addrress>
+  </User>
+  <User id="2">
+    <Name>Or</Name>
+    <Addrress>RamatGan</Addrress>
+  </User>
+  <User id="3">
+    <Name>Alon</Name>
+    <Addrress>Jerusalem</Addrress>
+  </User>
+  <User id="4">
+    <Name>Shaked</Name>
+    <Addrress>TelAviv</Addrress>
+  </User>
+  <User id="5">
+    <Name>Renat</Name>
+    <Addrress>TLV</Addrress>
+  </User>
+</ArrayOfUser>
